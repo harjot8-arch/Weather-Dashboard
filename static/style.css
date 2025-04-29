@@ -1,0 +1,124 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #00c6ff, #0072ff); /* Soft gradient for the background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Main Container */
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 40px 60px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+/* Title */
+h1 {
+    color: #0072ff;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+form input[type="text"] {
+    padding: 15px;
+    width: 90%;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+form input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6); /* Focus effect */
+}
+
+form button {
+    padding: 15px 30px;
+    background-color: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 30px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Weather Box */
+.weather-box {
+    margin-top: 25px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px;
+    margin-left: 370px;
+}
+
+.weather-box h2 {
+    font-size: 28px;
+    color: #0072ff;
+    margin-bottom: 10px;
+}
+
+.weather-box p {
+    font-size: 20px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.weather-box img {
+    width: 100px;
+    height: 100px;
+    margin: 15px 0;
+    transition: transform 0.5s ease;
+}
+
+.weather-box img:hover {
+    transform: rotate(360deg); /* Icon animation */
+}
+
+/* Error Message */
+.error {
+    color: #e53935;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 30px;
+        max-width: 90%;
+    }
+
+    form input[type="text"] {
+        width: 100%;
+    }
+}

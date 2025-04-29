@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌦 Weather Dashboard</h1>
+
+        <!-- Form to enter the city name -->
+        <form method="POST">
+            <input type="text" name="city" placeholder="Enter city name" required>
+            <button type="submit">Get Weather</button>
+        </form>
+
+        <!-- If weather data is available, show it -->
+        {% if weather %}
+            {% if weather.error %}
+                <!-- If there was an error, like "City not found" -->
+                <p class="error">{{ weather.error }}</p>
+            {% else %}
+                <!-- Show weather details -->
+                <div class="weather-box">
+                    <h2>{{ weather.city }}</h2>
+                    <img src="https://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="Weather Icon">
+                    <p>{{ weather.temperature }}°C</p>
+                    <p>{{ weather.description }}</p>
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
